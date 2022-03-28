@@ -1,0 +1,132 @@
+html {
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 13px;
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+body {
+  background: hsl(0, 0%, 81%);
+}
+.container {
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
+  > .cart {
+    grid-column-start: 2;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    > .author {
+      display: flex;
+      align-items: center;
+      > img {
+        border-radius: 50%;
+        transform: scale(0.7);
+        border: 5px solid;
+      }
+      > .author-text {
+        padding-left: 10px;
+        line-height: 5px;
+        > .role {
+          opacity: 0.5;
+        }
+      }
+    }
+    > .subject {
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+    > .main {
+      font-weight: 500;
+      opacity: 0.7;
+    }
+  }
+  > .first-cart {
+    background: hsl(263, 55%, 52%);
+    color: hsl(0, 0%, 100%);
+    position: relative;
+    > .quotes {
+      position: absolute;
+      top: 0;
+      right: 80px;
+    }
+    > .author {
+      position: relative;
+      z-index: 2;
+      > img {
+        border-color: hsl(263, 100%, 66%);
+      }
+    }
+    > .subject {
+      position: relative;
+      z-index: 2;
+    }
+    > .main {
+      position: relative;
+      z-index: 2;
+    }
+  }
+  > .second-cart {
+    color: hsl(0, 0%, 100%);
+    background: hsl(217, 19%, 35%);
+    > .author {
+      > img {
+        border: none;
+      }
+    }
+  }
+  > .third-cart {
+    background: hsl(0, 0%, 100%);
+    > .author {
+      > img {
+        border: none;
+      }
+    }
+  }
+  > .fourth-cart {
+    color: hsl(0, 0%, 100%);
+    background: hsl(219, 29%, 14%);
+    > .author {
+      > img {
+        border-color: hsl(263, 55%, 52%);
+      }
+    }
+  }
+  > .fifth-cart {
+    background: hsl(0, 0%, 100%);
+    > .author {
+      > img {
+        border: none;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .container {
+    display: grid;
+    grid-template-columns: 10% 20% 20% 20% 20% 10%;
+
+    > .first-cart {
+      grid-column-start: 2;
+      grid-column-end: 4;
+    }
+    > .second-cart {
+      grid-column-start: 4;
+    }
+    > .third-cart {
+      grid-column-start: 2;
+      grid-row-start: 2;
+    }
+    > .fourth-cart {
+      grid-column-start: 3;
+      grid-column-end: 5;
+      grid-row-start: 2;
+    }
+    > .fifth-cart {
+      grid-column-start: 5;
+      grid-row-start: 1;
+      grid-row-end: 3;
+    }
+  }
+}
